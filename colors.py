@@ -11,8 +11,7 @@ cv2.createTrackbar('H','image',0,179,nothing)
 cv2.createTrackbar('S','image',0,255,nothing) 
 cv2.createTrackbar('V','image',0,255,nothing) 
 
-while(1): 
-    cv2.imshow('image',img) 
+while(1):  
     k=cv2.waitKey(1)&0xFF 
     if k==27: 
         break 
@@ -22,6 +21,7 @@ while(1):
     v=cv2.getTrackbarPos('V','image') 
     img[:]=[h,s,v]
     bgr=cv2.cvtColor(img,cv2.COLOR_HSV2BGR)
+    cv2.imshow('image',bgr)
          
 
 cv2.destroyAllWindows()

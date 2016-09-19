@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-f="2.jpg"
+f="4.jpg"
 img=cv2.imread(f)
 hsv = cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
 
